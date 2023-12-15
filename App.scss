@@ -1,0 +1,760 @@
+@import "index";
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+header{
+ height: 80px !important;
+ @include breakpoint(large){
+    height: 100px !important;
+}
+    .Navbar{ 
+        align-items: center;
+        position: fixed;
+        background: $branco;
+        display: flex;
+        height: 66px;
+        width: 100%;
+        z-index: 10;
+        justify-content: space-between;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        padding: 0.5rem;
+        @include breakpoint(large){
+            padding: 1rem;
+        }
+        @include breakpoint(plarge){
+            padding: 1.5rem;
+        }
+    }
+    .navLogo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+ 
+     }
+    .linkContainer{
+        margin-right: 10%;
+        align-items: center;
+        display: flex;
+        .MenuItems{
+        display: none;
+        @include breakpoint(large){
+            display: flex;
+            a{
+                text-decoration: none;
+                font-family: $font1;
+                font-size: 16px;
+                margin-right: 40px;
+                color: black;
+                &:hover{
+                    color: $cor2;
+                }
+            }
+         }
+        }
+
+        .isOpen{
+            margin-top: 37px;
+           left: 20%;
+           height: 150px;
+           width: 50%;
+           padding: 1.6rem;
+            position: absolute;
+            background-color: rgb(0, 147, 155);          
+            display: flex;         
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 20px;
+            a{
+                margin-top: 7px;
+                text-decoration: none;
+                color: $branco;
+                font-family: $font1;
+                font-weight: 500;
+            }
+            @include breakpoint(large){
+                display: none;
+             }
+        }
+
+        .hamburguer{
+            @include breakpoint(large){
+                display: none;
+             }
+        }
+    }
+
+
+ 
+
+}
+
+
+
+
+
+  
+.mainSec{
+    @include breakpoint(large){
+        display: flex;
+        align-items: center;
+    }
+    .backgroundImg{
+        background-image: url(./content/mainImgClean.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        height: 500px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            top: 314px;
+            background-color: rgb(90 167 247 / 32%);
+            z-index: 0;
+            @include breakpoint(large){
+            display: none;
+            }
+    
+
+        }
+
+        @include breakpoint(large){
+            background-size: cover;
+            background-position: left; 
+            height: 800px;
+            width: 65%;
+        }
+
+ 
+  
+        img{
+            height: 20px;
+        }
+        
+        .h2Container{
+           
+            max-width: 200px;
+            left: 10%;
+            top:66%;
+            position: relative;   
+            @include breakpoint(large){
+                display: none;
+                  
+              }     
+        .h2mainSec{
+             position: relative;
+             width: 200px;
+             height: 60px;    
+             border-right: 3px solid rgb(4 189 199);
+             border-left: 3px solid rgb(4 189 199);
+             border-bottom: 3px solid rgb(4 189 199);
+             padding: 1rem;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+
+             .mainSecIcon{
+                position: absolute;
+                left: 42%;
+                
+                margin-top: 16px;
+                height: 51px;
+             }
+             h1:first-child{
+                font-size: 20px;
+               text-align: center;
+               color: $branco;
+               margin-top: 10px;
+               font-family: 'Dancing Script', cursive;
+               
+               &::before{
+                position: absolute;
+                content: '';
+                margin-top: 28px;
+                width: 95px;
+                height: 2px;
+                background: #79CFFF;
+               }
+
+          
+             
+       
+           }
+           h1:nth-child(2){
+            font-weight: 400;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 10px;
+            color: $branco;
+           }
+              
+             
+            
+        
+        }}
+    }
+    .h2ContainerDektop{
+        display: none;
+        position: relative;
+        width: 50%;
+        height: 800px;
+        align-items: center;
+        justify-content: center;
+        .mainSecIconDesk{
+            position: absolute;
+            z-index: 1;
+            bottom: 18%;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(90 167 247 / 32%);
+            z-index: 0;
+        }
+        .h2mainSec{
+  
+           h1:first-child{
+                font-size: 36px;
+               text-align: center;
+               color: $preto;
+               margin-top: 10px;
+               font-family: 'Dancing Script', cursive;
+               
+               &::before{
+                position: absolute;
+                content: '';
+                margin-top: 50px;
+                width: 160px;
+                height: 2px;
+                background: #79CFFF;
+               }
+       
+           }
+
+           h1:nth-child(2){
+            font-weight: 400;
+            font-size: 36px;
+            font-family: 'Raleway', sans-serif;
+            margin-top: 20px;
+           }
+         
+            
+       
+       }
+        @include breakpoint(large){
+          display: flex;
+          position: relative;
+          
+        }
+    }        
+    }
+
+    
+
+
+.ideaisSection{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+     padding: 2rem;
+     padding-top: 120px;
+     padding-bottom: 120px;
+     h1{
+        font-size: 26px;
+        margin-bottom: 40px;
+        color: black;
+         font-family: 'Roboto', sans-serif;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+    &::after{
+        position: relative;
+        display: flex;
+        content: "";
+        width: 50%;
+        height: 4px;
+        background-color: $cor3;
+        margin-top: 20px;
+        border-radius: 10px;
+        margin-bottom: 60px;
+    }
+}
+    .ideaisContainer{
+        background-color: $branco;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 40px;
+        margin-bottom: 60px;
+        @include breakpoint(small){
+           display: flex;
+           flex-direction: row;
+        }
+        @include breakpoint(medium){
+            gap: 100px;
+          }
+        
+        @include breakpoint(large){
+           gap: 200px;
+         }
+         @include breakpoint(plarge){
+            gap: 300px;
+         }
+            .BoxContainer{
+                display: flex;
+                flex-direction: column;
+                max-width: 190px;
+                .Heart{
+                    font-size: 60px;
+                    margin-bottom: 15px;
+
+                }
+                .Shield{
+                    font-size: 60px;
+                    margin-bottom: 15px;
+                }
+                .Eye{
+                    font-size: 60px;
+                    margin-bottom: 15px;
+                }
+                h2{
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                    text-align: left;
+                    font-weight: 800;
+                    font-family: $font1;
+                    &::after{
+                        position: relative;
+        display: flex;
+        content: "";
+        width: 50%;
+        height: 4px;
+        background-color: $cor3;
+        margin-top: 40px;
+        border-radius: 10px;
+                    }
+                }
+                h3{
+                    font-weight: 600;
+                    margin-top: 7px;
+                    font-family: $font2;
+                }
+            }
+    }
+    
+}
+
+.NossosServiços{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee6ff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .serviceContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+    .ServiçosLabel{
+        margin-bottom: 80px;
+        text-align: center;
+        @include breakpoint(extraSmall){
+            text-align: start;
+         }
+        h1{
+            font-size: 30px;
+            color: $cor3;
+            font-family: 'Roboto', sans-serif;
+
+        }
+    } 
+        .firstBoxContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        @include breakpoint(extraSmall){
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+         }
+    }
+
+    .HowWeDoContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        display: flex;
+        margin-bottom: 60px;
+        @include breakpoint(large){
+         flex-direction: row;
+         }
+        .HowBoxContainer{
+            padding: 1rem;
+            border-radius: 20px;
+            width: 200px;
+            height: 370px;
+            background-color: $branco;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            list-style: circle;
+            .containerHowTitle{
+                font-size: 24px;
+                margin-top: 25px;
+                background-color: rgba(90, 167, 247, 0.32);
+                border-radius: 50px;
+                width: 150px;
+                color: $preto;
+                padding: 0.5rem;
+                font-family: 'Alumni Sans', sans-serif;
+                margin-bottom: 40px;
+            }
+
+            h2{
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                &:last-child{
+                    margin-top: 20px; 
+                }
+                
+            }
+        
+
+        }
+    }
+    }}
+
+.ReferenciaSection{
+    
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+   padding-top: 100px;
+   padding-bottom: 100px;
+
+    h1{
+        margin-top: 20px;
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: $cor3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+    &::after{
+        position: relative;
+        display: flex;
+        content: "";
+        width: 50%;
+        height: 4px;
+        background-color: $cor3;
+        margin-top: 40px;
+        border-radius: 10px;
+    }
+}
+.refContainer{
+    max-width: 500px;     
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        background-color: $branco;
+        padding: 1rem;
+        margin-bottom: 40px;
+        h2{
+            font-family: $font1;
+            color: $cor3;
+            padding: 1rem;
+            font-weight: 300;
+        }
+        @include breakpoint(medium){
+                max-width: 1000px;
+            }
+        
+}
+}
+.Faq{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  justify-content: center;
+  align-items: center;
+    padding: 2rem;
+    background-color: $claro;
+    h1{
+        font-size: 24px;
+        margin-bottom: 70px;
+        color: $preto;
+        
+    &::after{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 40px;
+        height: 2px;
+        background-color: $cor2;
+        margin-top: 7px;
+        border-radius: 10px;
+        max-width: 300px;
+    }
+    }
+    .FaqContainer{
+    
+        display: flex;
+        flex-direction: column;
+        background-color: $claro;
+        @include breakpoint(extraSmall){
+            min-width: 600px;
+          }
+          @include breakpoint(small){
+            min-width: 700px;
+          }
+          @include breakpoint(medium){
+            min-width: 800px;
+          }
+          @include breakpoint(large){
+            min-width: 900px;
+          }
+          @include breakpoint(plarge){
+            min-width: 1000px;
+          }
+    }
+    .sometinh{
+       max-width: 260px;
+
+       @include breakpoint(extraSmall){
+       max-width: 400px;
+     }
+     @include breakpoint(small){
+        max-width: 700px;
+     }
+     @include breakpoint(medium){
+       max-width: 800px;
+     }
+     @include breakpoint(large){
+       max-width: 900px;
+     }
+     @include breakpoint(plarge){
+       
+     }
+    }
+}
+
+.Contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 60px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @include breakpoint(medium){
+       flex-direction: row;
+       gap: 200px;
+    }
+    .form{
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    label{
+        display: block;
+        color: rgb(0, 0, 0);
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+        input{                 
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            &:focus{
+                border-color: #3498db;
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            }
+        }
+
+        
+        textarea{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            &:focus{
+                border-color: #3498db;
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            }
+        }
+        .btnContact{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+    
+    }
+    iframe{
+        width:240px;
+        height: 300px;
+        border: none;
+        @include breakpoint(extraSmall){
+            flex-direction: row;
+            gap: 200px;
+            width:400px;
+         }
+    }
+}
+.FooterContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $cor3;
+    @include breakpoint(extraSmall){
+      flex-direction: row;
+      align-items: flex-start;
+    }
+   .footerContactContainer{
+    margin-bottom: 45px;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    @include breakpoint(extraSmall){
+        right: 100px;
+      }
+    h1:first-child{
+        font-weight: 300;
+        font-size: 30px;
+       text-align: center;
+       color: $branco;
+       margin-top: 10px;
+       font-family: 'Dancing Script', cursive;
+       
+       &::before{
+        position: absolute;
+        content: '';
+        margin-top: 42px;
+        width: 134px;
+        height: 2px;
+        background: #79CFFF;
+       }    
+
+   }
+   h1:nth-child(2){
+    font-weight: 400;
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 10px;
+    color: $branco;
+   }
+   } 
+    ul{
+
+    h1{
+        color: white;
+        font-weight: 300;
+        &::after{
+            position: absolute;
+            display: block;
+            content: "";
+            width: 40px;
+            height: 2px;
+            background-color: $cor2;
+            margin-top: 7px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+    }
+    li{
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+       
+     
+        h2{
+            font-weight: 300;
+            color: white;
+        }
+    }}
+
+    .endereçoIcon{
+        color: #D6C2FF;
+    }
+    .pinCidade{
+        color: #D6C2FF;
+    }
+    .emailContact{
+        color: #D6C2FF;
+    }
+    .teleContact{
+        color: #D6C2FF;
+    }
+
+}
+
+footer{
+    width: 100%;
+    background-color: #D6C2FF;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    text-align: center;
+
+    @include breakpoint(medium){
+       flex-direction: row;
+    }
+    h2{
+        margin-right: 20px;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 30px;
+        @include breakpoint(medium){
+            margin-bottom: 0;
+         }
+    }
+    li{
+        display: flex;
+        gap: 5px;
+        color: white;
+        align-items: center;
+        a{
+            list-style: none;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

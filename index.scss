@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,200&display=swap');
+
+
+*{
+    //overflow-x: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    font-family: 'Quicksand', sans-serif;
+   padding: 0;
+   
+   font-size: 100%;
+   
+    box-sizing: inherit;
+}
+
+$font1: 'Roboto Condensed', sans-serif;; 
+$font2: 'Quicksand', sans-serif; 
+$preto:#000000;
+$claro: #e5e5e5;
+$branco:#ffffff;
+$cor1:rgba(90, 167, 247, 0.32);
+$cor2:#eee6ff;
+$cor3:rgb(0, 147, 155);
+$whatts:#5BBA75;
